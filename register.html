@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Football Club | Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>University Football Club</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Register for an event</h2>
+            <form id="register-form">
+                <fieldset>
+                    <legend>Your details</legend>
+
+                    <label for="fullname">Full name</label>
+                    <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50" placeholder="e.g. Ali Khan">
+
+                    <label for="email">University email</label>
+                    <input type="email" id="email" name="email" required placeholder="Qarshi@university.edu.pk">
+
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" required pattern="03[0-9]{9}" title="11 digits starting with 03" placeholder="03001234567">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event</legend>
+
+                    <label for="event">Choose an event</label>
+                    <select id="event" name="event" required>
+                        <option value="">Select an event</option>
+                        <option value="Freshers Trials">Freshers Trials</option>
+                        <option value="Friendly Football Match">Friendly Football Match</option>
+                        <option value="Football Skills Workshop">Football Skills Workshop</option>
+                        <option value="Inter-Department Football Cup">Inter-Department Football Cup</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+
+                    <input type="radio" id="hear-friend" name="hear" value="Friend" required>
+                    <label for="hear-friend">Friend</label>
+
+                    <input type="radio" id="hear-social" name="hear" value="Social media">
+                    <label for="hear-social">Social media</label>
+
+                    <input type="radio" id="hear-poster" name="hear" value="Poster">
+                    <label for="hear-poster">Poster</label>
+                </fieldset>
+
+                <button type="submit">Register</button>
+                <p id="message"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Saved registrations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Event</th>
+                        <th>Heard from</th>
+                    </tr>
+                </thead>
+                <tbody id="registrations-body">
+                </tbody>
+            </table>
+            <button type="button" id="clear-all">Clear all</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 University Football Club</p>
+        <p>Learn more: <a href="https://www.fifa.com/" target="_blank" rel="noopener noreferrer">FIFA</a></p>
+    </footer>
+</body>
+
+</html>
+
