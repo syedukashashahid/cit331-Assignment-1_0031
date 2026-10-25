@@ -24,7 +24,8 @@ This is a small website for a university football club. It shows the club's upco
 
 ## Live site
 
-https://syedukashashahid.github.io/cit331-Assignment-1_0031/
+- GitHub Pages: https://syedukashashahid.github.io/cit331-Assignment-1_0031/
+- Vercel (bonus): https://cit331-assignment-10031.vercel.app
 
 ## Screenshot
 
