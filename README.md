@@ -32,4 +32,4 @@ https://github.com/syedukashashahid/cit331-Assignment-1_0031
 
 ## Image sources
 
-- images/logo.svg: https://www.vecteezy.com/vector-art/47198293-football-team-logo-design-illustration-on-solid-background
+- images/logo.png: https://www.vecteezy.com/vector-art/47198293-football-team-logo-design-illustration-on-solid-background
