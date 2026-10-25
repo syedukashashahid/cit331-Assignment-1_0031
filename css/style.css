@@ -1,3 +1,222 @@
+/* ===== University Football Club: style.css ===== */
+/* Follows CIT331 Lecture 3: selectors, box model, positioning, Flexbox, responsive design */
+
+/* ---------- 1. Variables and base (custom properties, box-sizing, inheritance) ---------- */
+:root {
+  --brand: #14532d;
+  --accent: #facc15;
+  --bg: #f4f8f4;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #4b5b4b;
+  --border: #cfe0cf;
+  --space: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- 2. Headings and links (grouping selector, pseudo-classes) ---------- */
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brand);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--brand);
+}
+
+a:hover {
+  color: #000000;
+}
+
+/* Accessibility: always keep a clear focus outline */
+a:focus, button:focus, input:focus, select:focus {
+  outline: 3px solid #1d4ed8;
+}
+
+/* Attribute selector + pseudo-element: mark external links */
+a[href^="https"]::after {
+  content: " (external)";
+  font-size: 0.85em;
+}
+
+/* ---------- 3. Header and navigation (Flexbox, sticky positioning) ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--brand);
+  padding: var(--space) 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+header h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+nav a.active {
+  background: var(--accent);
+  color: var(--text);
+  font-weight: bold;
+}
+
+nav a:focus, footer a:focus {
+  outline: 3px solid #ffffff;
+}
+
+/* ---------- 4. Main area and cards (box model) ---------- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space);
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+article, aside {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+figure {
+  margin: var(--space) 0;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Event cards side by side (Flexbox) */
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+}
+
+.event-list article {
+  flex: 1 1 250px;
+}
+
+/* ---------- 5. Footer (Flexbox) ---------- */
+footer {
+  background: var(--brand);
+  color: #ffffff;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* ---------- 6. Forms ---------- */
+fieldset {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 0 0 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--brand);
+  padding: 0 8px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Attribute selectors for input types */
+input[type="text"], input[type="email"], input[type="tel"], select {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 4px 0 14px;
+  border: 1px solid #6b7f6b;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #ffffff;
+  color: var(--text);
+}
+
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+/* Adjacent sibling combinator: label right after a radio */
+input[type="radio"] + label {
+  margin-right: 16px;
+}
+
+button {
+  background: var(--brand);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 22px;
+  border: 2px solid var(--brand);
   border-radius: 8px;
 }
 
