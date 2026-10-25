@@ -28,13 +28,15 @@
                     <legend>Your details</legend>
 
                     <label for="fullname">Full name</label>
-                    <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50" placeholder="e.g. Ali Khan">
+                    <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50"
+                        placeholder="e.g. Ali Khan">
 
                     <label for="email">University email</label>
                     <input type="email" id="email" name="email" required placeholder="Qarshi@university.edu.pk">
 
                     <label for="phone">Phone number</label>
-                    <input type="tel" id="phone" name="phone" required pattern="03[0-9]{9}" title="11 digits starting with 03" placeholder="03001234567">
+                    <input type="tel" id="phone" name="phone" required pattern="03[0-9]{9}"
+                        title="11 digits starting with 03" placeholder="03001234567">
                 </fieldset>
 
                 <fieldset>
@@ -70,19 +72,21 @@
 
         <section>
             <h2>Saved registrations</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Event</th>
-                        <th>Heard from</th>
-                    </tr>
-                </thead>
-                <tbody id="registrations-body">
-                </tbody>
-            </table>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Event</th>
+                            <th>Heard from</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registrations-body">
+                    </tbody>
+                </table>
+            </div>
             <button type="button" id="clear-all">Clear all</button>
         </section>
     </main>
@@ -94,4 +98,3 @@
 </body>
 
 </html>
-
